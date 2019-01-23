@@ -1,4 +1,4 @@
-# cfssl-agh-class
+# cfssl-examples
 Cfssl CA example
 
 1. Generate self-sign CA:
@@ -14,8 +14,16 @@ Cfssl CA example
   ```
   cfssl gencert -config=client-conf.json -remote=127.0.0.1 -profile=client client-req.json | cfssljson --bare temp/test123
   ```
-4. Verify certificate and key md5 hash: 
+4. Verify certificate and key (md5 hash):
   ```
   openssl rsa -modulus -noout -in temp/test123-key.pem | openssl md5
   openssl x509 -modulus -noout -in temp/test123.pem | openssl md5
+  ```
+5. Check certificate against bundle:
+  ```
+  openssl verify -CAfile temp/root-ca.pem temp/test123.pem
+  ```
+6. Display CSR content:
+  ```
+   openssl req -in temp/test123.csr -noout -text
   ```
