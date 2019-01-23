@@ -1,0 +1,25 @@
+{
+    "signing": {
+        "default": {
+            "expiry": "200h",
+            "auth_key": "apikey"
+        },
+        "profiles": {
+            "client": {
+                "auth_key": "apikey",
+                "expiry": "100h",
+                "usages": [
+                    "signing",
+                    "key encipherment",
+                    "client auth"
+                ]
+            }
+        }
+    },
+    "auth_keys": {
+        "apikey": {
+            "key": "0123456789ABCDEF0123456789ABCDEF",
+            "type": "standard"
+        }
+    }
+}

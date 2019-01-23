@@ -1,0 +1,21 @@
+{
+   "auth_keys" : {
+      "default" : {
+         "type" : "standard",
+         "key" : "0123456789ABCDEF0123456789ABCDEF"
+      }
+   },
+   "remotes": {
+    "default": "127.0.0.1"
+   },
+   "signing" : {
+      "default": {
+          "auth_remote": {
+            "auth_key" : "default",
+            "remote": "default"
+          }
+      }
+    }
+}
+
+

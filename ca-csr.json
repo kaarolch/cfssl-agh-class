@@ -1,0 +1,19 @@
+{
+  "CN": "Root CA",
+  "key": {
+    "algo": "rsa",
+    "size": 4096
+  },
+  "names": [
+    {
+      "C":  "PL",
+      "L":  "Krakow",
+      "O":  "AGH",
+      "OU": "Example"
+    }
+   ],
+  "ca": {
+    "expiry": "262800h"
+  }
+}
+
